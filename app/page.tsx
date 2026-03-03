@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { DecorativeCard, SectionHeading } from "@/components/ui";
@@ -28,10 +29,16 @@ const featuredCategories = [
 const heroImage =
   "https://images.pexels.com/photos/7564863/pexels-photo-7564863.jpeg?cs=srgb&dl=pexels-cottonbro-7564863.jpg&fm=jpg";
 
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Explore Fs Auto Supply for dependable automotive parts, service-ready inventory, and fast quote support for shops, fleets, and daily drivers.",
+};
+
 export default function HomePage() {
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 py-8 md:gap-20 md:px-10 md:py-10">
-      <section className="grid gap-8 rounded-[2rem] bg-white/85 p-6 shadow-card backdrop-blur sm:p-8 md:grid-cols-[1.2fr_0.8fr] md:p-12">
+    <main className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 py-6 sm:px-6 sm:py-8 md:gap-16 md:px-10 md:py-10">
+      <section className="grid gap-8 rounded-[2rem] bg-white/90 p-5 shadow-card backdrop-blur sm:p-8 md:grid-cols-[1.2fr_0.8fr] md:p-12">
         <div className="space-y-6">
           <span className="inline-flex rounded-full bg-brand-100 px-4 py-2 text-sm font-semibold text-brand-800">
             Ready for launch
@@ -49,13 +56,13 @@ export default function HomePage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center rounded-full bg-brand-700 px-6 py-3 font-semibold text-white transition duration-200 hover:bg-brand-800"
+              className="inline-flex w-full items-center justify-center rounded-full bg-brand-700 px-6 py-3 font-semibold text-white transition duration-200 hover:bg-brand-800 sm:w-auto"
             >
               Browse inventory
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-900 transition duration-200 hover:border-brand-400 hover:bg-brand-50 hover:text-brand-800"
+              className="inline-flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-900 transition duration-200 hover:border-brand-400 hover:bg-brand-50 hover:text-brand-800 sm:w-auto"
             >
               Request a quote
             </Link>
@@ -66,7 +73,7 @@ export default function HomePage() {
               alt="Mechanic working under an open vehicle hood"
               width={960}
               height={540}
-              className="h-64 w-full rounded-[1.25rem] object-cover sm:h-72"
+              className="h-56 w-full rounded-[1.25rem] object-cover sm:h-72 md:h-80"
               priority
             />
           </div>
@@ -84,11 +91,11 @@ export default function HomePage() {
           title="Top categories"
           copy="Focused product areas presented with stable visual blocks that keep the storefront clean and dependable."
         />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {featuredCategories.map((category, index) => (
             <article
               key={category.name}
-              className="rounded-3xl bg-white p-6 shadow-card transition duration-200 hover:-translate-y-1"
+              className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-card transition duration-200 hover:-translate-y-1"
             >
               <div className="mb-5 overflow-hidden rounded-2xl border border-brand-100 bg-brand-50 p-3">
                 <Image
@@ -107,6 +114,12 @@ export default function HomePage() {
                 Clear category presentation built for quick browsing and easy
                 expansion as Fs Auto Supply adds more inventory.
               </p>
+              <Link
+                href="/shop"
+                className="mt-5 inline-flex text-sm font-semibold text-brand-800 transition duration-200 hover:text-brand-600"
+              >
+                Explore products
+              </Link>
             </article>
           ))}
         </div>

@@ -16,7 +16,7 @@ export function SiteShell({ children }: SiteShellProps) {
   return (
     <div className="relative min-h-screen overflow-x-clip">
       <div className="pointer-events-none absolute inset-0 hidden xl:block" aria-hidden="true">
-        <div className="absolute left-[-7rem] top-36 rotate-[-8deg] opacity-20">
+        <div className="absolute left-[-7rem] top-36 rotate-[-8deg] opacity-15 blur-[0.5px]">
           <Image
             src="/hero-vehicle.svg"
             alt=""
@@ -25,7 +25,7 @@ export function SiteShell({ children }: SiteShellProps) {
             className="h-auto w-72"
           />
         </div>
-        <div className="absolute right-[-6rem] top-[28rem] rotate-[6deg] opacity-15">
+        <div className="absolute right-[-6rem] top-[28rem] rotate-[6deg] opacity-10 blur-[0.5px]">
           <Image
             src="/shop-shelf.svg"
             alt=""
@@ -34,7 +34,7 @@ export function SiteShell({ children }: SiteShellProps) {
             className="h-auto w-80"
           />
         </div>
-        <div className="absolute left-[-5rem] bottom-52 rotate-[8deg] opacity-15">
+        <div className="absolute left-[-5rem] bottom-52 rotate-[8deg] opacity-10 blur-[0.5px]">
           <Image
             src="/about-warehouse.svg"
             alt=""
@@ -43,7 +43,7 @@ export function SiteShell({ children }: SiteShellProps) {
             className="h-auto w-72"
           />
         </div>
-        <div className="absolute right-[-5rem] bottom-24 rotate-[-6deg] opacity-20">
+        <div className="absolute right-[-5rem] bottom-24 rotate-[-6deg] opacity-15 blur-[0.5px]">
           <Image
             src="/contact-delivery.svg"
             alt=""
@@ -53,15 +53,15 @@ export function SiteShell({ children }: SiteShellProps) {
           />
         </div>
       </div>
-      <header className="sticky top-0 z-20 border-b border-white/60 bg-white/85 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-10">
+      <header className="sticky top-0 z-20 border-b border-white/60 bg-white/90 shadow-[0_8px_30px_rgba(15,23,42,0.04)] backdrop-blur">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between md:px-10">
           <Link
             href="/"
             className="text-center text-base font-black uppercase tracking-[0.2em] text-brand-800 sm:text-lg md:text-left"
           >
             Fs Auto Supply
           </Link>
-          <nav className="flex w-full flex-wrap items-center justify-center gap-2 rounded-3xl border border-slate-200 bg-white p-2 shadow-sm md:w-auto md:justify-end md:rounded-full">
+          <nav className="grid w-full grid-cols-2 gap-2 rounded-3xl border border-slate-200 bg-white p-2 shadow-sm sm:flex sm:flex-wrap sm:items-center sm:justify-center md:w-auto md:justify-end md:rounded-full">
             {navigation.map((item) => (
               <Link
                 key={item.href}
@@ -75,11 +75,14 @@ export function SiteShell({ children }: SiteShellProps) {
         </div>
       </header>
       <div className="relative z-10">{children}</div>
-      <footer className="border-t border-slate-200/80 bg-white/85">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between md:px-10">
+      <footer className="border-t border-slate-200/80 bg-white/90">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-slate-600 sm:px-6 md:flex-row md:items-center md:justify-between md:px-10">
           <div className="space-y-1">
             <p className="font-semibold text-slate-900">Fs Auto Supply</p>
-            <p>Dependable automotive parts supply for service-ready orders and fast quotes.</p>
+            <p className="max-w-xl">
+              Dependable automotive parts supply for service-ready orders, fast quotes,
+              and consistent support.
+            </p>
           </div>
           <Link
             href="/contact"

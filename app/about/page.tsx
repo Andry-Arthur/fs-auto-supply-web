@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui";
 
@@ -10,9 +11,15 @@ const pillars = [
 const aboutImage =
   "https://images.unsplash.com/photo-1764406102144-f0a4450a85b5?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000";
 
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn how Fs Auto Supply supports shops, fleets, and everyday drivers with dependable parts sourcing and straightforward service.",
+};
+
 export default function AboutPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-8 md:gap-10 md:px-10 md:py-10">
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8 md:gap-10 md:px-10 md:py-10">
       <SectionHeading
         title="About Fs Auto Supply"
         copy="Fs Auto Supply is positioned as a dependable source for service-ready parts, clear communication, and fast ordering."
@@ -23,7 +30,7 @@ export default function AboutPage() {
           alt="Auto supply warehouse exterior"
           width={1100}
           height={520}
-          className="h-64 w-full rounded-[1.5rem] object-cover sm:h-72"
+          className="h-56 w-full rounded-[1.5rem] object-cover sm:h-72 md:h-80"
         />
       </div>
       <section className="rounded-[2rem] bg-white p-6 shadow-card sm:p-8 md:p-10">
@@ -32,7 +39,7 @@ export default function AboutPage() {
           service-ready inventory, straightforward purchasing, and a clean
           digital presence that can be expanded after launch.
         </p>
-        <div className="mt-8 grid gap-4">
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
           {pillars.map((pillar) => (
             <div
               key={pillar}

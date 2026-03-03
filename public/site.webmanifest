@@ -1,0 +1,17 @@
+{
+  "name": "Fs Auto Supply",
+  "short_name": "Fs Auto Supply",
+  "description": "Dependable automotive parts and service-ready supply for shops, fleets, and daily drivers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#17322d",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

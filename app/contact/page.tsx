@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui";
@@ -5,14 +6,20 @@ import { SectionHeading } from "@/components/ui";
 const contactImage =
   "https://images.pexels.com/photos/7568413/pexels-photo-7568413.jpeg?cs=srgb&dl=pexels-cottonbro-7568413.jpg&fm=jpg";
 
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Fs Auto Supply for inventory checks, quote requests, and support for service-ready automotive parts orders.",
+};
+
 export default function ContactPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-8 md:gap-10 md:px-10 md:py-10">
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8 md:gap-10 md:px-10 md:py-10">
       <SectionHeading
         title="Contact"
         copy="Reach Fs Auto Supply for quotes, inventory checks, and parts support with a simple, launch-ready contact experience."
       />
-      <section className="grid gap-6 md:grid-cols-[0.9fr_1.1fr]">
+      <section className="grid items-start gap-6 md:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[2rem] bg-brand-800 p-6 text-white shadow-card sm:p-8">
           <h2 className="text-2xl font-bold">Talk to the parts desk</h2>
           <div className="mt-5 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3">
@@ -21,7 +28,7 @@ export default function ContactPage() {
               alt="Mechanic checking spare parts on a workbench"
               width={720}
               height={420}
-              className="h-56 w-full rounded-2xl object-cover"
+              className="h-52 w-full rounded-2xl object-cover sm:h-56"
             />
           </div>
           <p className="mt-4 leading-8 text-brand-100">
@@ -29,7 +36,7 @@ export default function ContactPage() {
             questions, and quote requests for routine service needs.
           </p>
           <div className="mt-8 space-y-3 text-sm font-medium text-brand-100">
-            <p>Phone: (555) 010-2026</p>
+            <p>Phone: (669) 249-0188</p>
             <p>Email: sales@fsautosupply.example</p>
             <p>Hours: Mon-Fri, 7:00 AM to 6:00 PM</p>
           </div>
@@ -70,7 +77,7 @@ export default function ContactPage() {
             </label>
             <button
               type="button"
-              className="rounded-full bg-slate px-6 py-3 font-semibold text-white transition duration-200 hover:bg-slate-800"
+              className="w-full rounded-full bg-slate px-6 py-3 font-semibold text-white transition duration-200 hover:bg-slate-800 sm:w-auto"
             >
               Send inquiry
             </button>

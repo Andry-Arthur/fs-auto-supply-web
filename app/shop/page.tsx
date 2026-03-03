@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui";
 
@@ -31,9 +32,15 @@ const products = [
 const shopBanner =
   "https://images.pexels.com/photos/32391493/pexels-photo-32391493.jpeg?cs=srgb&dl=pexels-bulat369-1243575272-32391493.jpg&fm=jpg";
 
+export const metadata: Metadata = {
+  title: "Shop",
+  description:
+    "Browse Fs Auto Supply product categories including brake kits, filters, lighting, and suspension parts for service-ready automotive orders.",
+};
+
 export default function ShopPage() {
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-8 md:gap-10 md:px-10 md:py-10">
+    <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8 md:gap-10 md:px-10 md:py-10">
       <SectionHeading
         title="Shop"
         copy="A clean catalog view for Fs Auto Supply with service-ready inventory highlights and straightforward browsing."
@@ -44,14 +51,14 @@ export default function ShopPage() {
           alt="Mechanic working in an auto repair shop"
           width={1200}
           height={520}
-          className="h-64 w-full rounded-[1.5rem] object-cover sm:h-72"
+          className="h-56 w-full rounded-[1.5rem] object-cover sm:h-72 md:h-80"
         />
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {products.map((product) => (
           <article
             key={product.name}
-            className="rounded-3xl bg-white p-6 shadow-card sm:p-7"
+            className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-card sm:p-7"
           >
             <div className="mb-5 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 p-3">
               <Image

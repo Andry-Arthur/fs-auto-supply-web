@@ -26,6 +26,7 @@ body {
     Arial,
     Helvetica,
     sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -35,4 +36,13 @@ a {
 
 main {
   width: 100%;
+}
+
+img {
+  display: block;
+}
+
+::selection {
+  background: rgba(47, 120, 100, 0.18);
+  color: #0f172a;
 }
