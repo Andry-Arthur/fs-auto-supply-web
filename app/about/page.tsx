@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui";
 
 const pillars = [
@@ -8,13 +9,22 @@ const pillars = [
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-10 md:px-10">
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-8 md:gap-10 md:px-10 md:py-10">
       <SectionHeading
         title="About Fs Auto Supply"
-        copy="This starter positions the business with a clear story and a dependable first deployment path."
+        copy="Fs Auto Supply is positioned as a dependable source for service-ready parts, clear communication, and fast ordering."
       />
-      <section className="rounded-[2rem] bg-white p-8 shadow-card md:p-10">
-        <p className="text-lg leading-8 text-slate-700">
+      <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-card">
+        <Image
+          src="/about-warehouse.svg"
+          alt="Illustration of an organized automotive parts warehouse"
+          width={1100}
+          height={520}
+          className="h-auto w-full rounded-[1.5rem]"
+        />
+      </div>
+      <section className="rounded-[2rem] bg-white p-6 shadow-card sm:p-8 md:p-10">
+        <p className="text-base leading-8 text-slate-700 sm:text-lg">
           Fs Auto Supply is presented as a dependable parts source focused on
           service-ready inventory, straightforward purchasing, and a clean
           digital presence that can be expanded after launch.

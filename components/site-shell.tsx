@@ -15,16 +15,19 @@ export function SiteShell({ children }: SiteShellProps) {
   return (
     <div className="min-h-screen">
       <header className="sticky top-0 z-20 border-b border-white/60 bg-white/85 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-          <Link href="/" className="text-lg font-black uppercase tracking-[0.2em] text-brand-800">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-10">
+          <Link
+            href="/"
+            className="text-center text-base font-black uppercase tracking-[0.2em] text-brand-800 sm:text-lg md:text-left"
+          >
             Fs Auto Supply
           </Link>
-          <nav className="flex items-center gap-2 rounded-full border border-slate-200 bg-white p-1">
+          <nav className="flex w-full flex-wrap items-center justify-center gap-2 rounded-3xl border border-slate-200 bg-white p-2 shadow-sm md:w-auto md:justify-end md:rounded-full">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-800"
+                className="min-w-[88px] rounded-full px-4 py-2 text-center text-sm font-semibold text-slate-700 transition duration-200 hover:bg-brand-50 hover:text-brand-800"
               >
                 {item.label}
               </Link>
@@ -33,10 +36,18 @@ export function SiteShell({ children }: SiteShellProps) {
         </div>
       </header>
       {children}
-      <footer className="border-t border-slate-200/80 bg-white/80">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-slate-600 md:px-10">
-          <p className="font-semibold text-slate-900">Fs Auto Supply</p>
-          <p>Next.js + Tailwind starter prepared for a straightforward Vercel deployment.</p>
+      <footer className="border-t border-slate-200/80 bg-white/85">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between md:px-10">
+          <div className="space-y-1">
+            <p className="font-semibold text-slate-900">Fs Auto Supply</p>
+            <p>Dependable automotive parts supply for service-ready orders and fast quotes.</p>
+          </div>
+          <Link
+            href="/contact"
+            className="inline-flex w-full items-center justify-center rounded-full border border-brand-200 px-5 py-3 font-semibold text-brand-800 transition duration-200 hover:border-brand-400 hover:bg-brand-50 md:w-auto"
+          >
+            Contact the parts desk
+          </Link>
         </div>
       </footer>
     </div>
