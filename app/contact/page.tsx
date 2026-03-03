@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui";
 
+const contactImage =
+  "https://images.pexels.com/photos/7568413/pexels-photo-7568413.jpeg?cs=srgb&dl=pexels-cottonbro-7568413.jpg&fm=jpg";
+
 export default function ContactPage() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-8 md:gap-10 md:px-10 md:py-10">
@@ -14,11 +17,11 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold">Talk to the parts desk</h2>
           <div className="mt-5 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3">
             <Image
-              src="/contact-delivery.svg"
-              alt="Illustration of delivery van and support desk"
+              src={contactImage}
+              alt="Mechanic checking spare parts on a workbench"
               width={720}
               height={420}
-              className="h-auto w-full rounded-2xl"
+              className="h-56 w-full rounded-2xl object-cover"
             />
           </div>
           <p className="mt-4 leading-8 text-brand-100">

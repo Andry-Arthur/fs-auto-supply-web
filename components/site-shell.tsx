@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
@@ -13,7 +14,45 @@ type SiteShellProps = Readonly<{
 
 export function SiteShell({ children }: SiteShellProps) {
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen overflow-x-clip">
+      <div className="pointer-events-none absolute inset-0 hidden xl:block" aria-hidden="true">
+        <div className="absolute left-[-7rem] top-36 rotate-[-8deg] opacity-20">
+          <Image
+            src="/hero-vehicle.svg"
+            alt=""
+            width={320}
+            height={180}
+            className="h-auto w-72"
+          />
+        </div>
+        <div className="absolute right-[-6rem] top-[28rem] rotate-[6deg] opacity-15">
+          <Image
+            src="/shop-shelf.svg"
+            alt=""
+            width={320}
+            height={180}
+            className="h-auto w-80"
+          />
+        </div>
+        <div className="absolute left-[-5rem] bottom-52 rotate-[8deg] opacity-15">
+          <Image
+            src="/about-warehouse.svg"
+            alt=""
+            width={300}
+            height={170}
+            className="h-auto w-72"
+          />
+        </div>
+        <div className="absolute right-[-5rem] bottom-24 rotate-[-6deg] opacity-20">
+          <Image
+            src="/contact-delivery.svg"
+            alt=""
+            width={280}
+            height={160}
+            className="h-auto w-64"
+          />
+        </div>
+      </div>
       <header className="sticky top-0 z-20 border-b border-white/60 bg-white/85 backdrop-blur">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between md:px-10">
           <Link
@@ -35,7 +74,7 @@ export function SiteShell({ children }: SiteShellProps) {
           </nav>
         </div>
       </header>
-      {children}
+      <div className="relative z-10">{children}</div>
       <footer className="border-t border-slate-200/80 bg-white/85">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between md:px-10">
           <div className="space-y-1">

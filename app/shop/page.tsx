@@ -5,20 +5,31 @@ const products = [
   {
     name: "Fleet Brake Service Kit",
     detail: "Pads, rotors, hardware, and fluid bundle for reliable scheduled maintenance.",
+    image:
+      "https://images.pexels.com/photos/7564863/pexels-photo-7564863.jpeg?cs=srgb&dl=pexels-cottonbro-7564863.jpg&fm=jpg",
   },
   {
     name: "High-Flow Intake Filters",
     detail: "Workshop-friendly replacement filters for routine service intervals.",
+    image:
+      "https://images.pexels.com/photos/7568413/pexels-photo-7568413.jpeg?cs=srgb&dl=pexels-cottonbro-7568413.jpg&fm=jpg",
   },
   {
     name: "LED Road Visibility Pack",
     detail: "Bulbs and support accessories for improved nighttime coverage.",
+    image:
+      "https://images.unsplash.com/photo-1764406102144-f0a4450a85b5?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
   },
   {
     name: "Suspension Refresh Bundle",
     detail: "Core front-end parts assembled for quick quoting and ordering.",
+    image:
+      "https://images.pexels.com/photos/32391493/pexels-photo-32391493.jpeg?cs=srgb&dl=pexels-bulat369-1243575272-32391493.jpg&fm=jpg",
   },
 ];
+
+const shopBanner =
+  "https://images.pexels.com/photos/32391493/pexels-photo-32391493.jpeg?cs=srgb&dl=pexels-bulat369-1243575272-32391493.jpg&fm=jpg";
 
 export default function ShopPage() {
   return (
@@ -29,11 +40,11 @@ export default function ShopPage() {
       />
       <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-card">
         <Image
-          src="/shop-shelf.svg"
-          alt="Illustration of stocked shelves with automotive parts"
+          src={shopBanner}
+          alt="Mechanic working in an auto repair shop"
           width={1200}
           height={520}
-          className="h-auto w-full rounded-[1.5rem]"
+          className="h-64 w-full rounded-[1.5rem] object-cover sm:h-72"
         />
       </div>
       <div className="grid gap-6 md:grid-cols-2">
@@ -44,11 +55,11 @@ export default function ShopPage() {
           >
             <div className="mb-5 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 p-3">
               <Image
-                src="/category-grid.svg"
-                alt="Graphic of automotive parts assortment"
+                src={product.image}
+                alt={`${product.name} product photo`}
                 width={720}
                 height={420}
-                className="h-auto w-full rounded-xl"
+                className="h-48 w-full rounded-xl object-cover"
               />
             </div>
             <h2 className="text-2xl font-bold text-slate">{product.name}</h2>

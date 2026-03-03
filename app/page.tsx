@@ -3,11 +3,30 @@ import Link from "next/link";
 import { DecorativeCard, SectionHeading } from "@/components/ui";
 
 const featuredCategories = [
-  "Brake kits",
-  "Filters",
-  "Suspension parts",
-  "Lighting",
+  {
+    name: "Brake kits",
+    image:
+      "https://images.pexels.com/photos/7564863/pexels-photo-7564863.jpeg?cs=srgb&dl=pexels-cottonbro-7564863.jpg&fm=jpg",
+  },
+  {
+    name: "Filters",
+    image:
+      "https://images.pexels.com/photos/7568413/pexels-photo-7568413.jpeg?cs=srgb&dl=pexels-cottonbro-7568413.jpg&fm=jpg",
+  },
+  {
+    name: "Suspension parts",
+    image:
+      "https://images.pexels.com/photos/32391493/pexels-photo-32391493.jpeg?cs=srgb&dl=pexels-bulat369-1243575272-32391493.jpg&fm=jpg",
+  },
+  {
+    name: "Lighting",
+    image:
+      "https://images.unsplash.com/photo-1764406102144-f0a4450a85b5?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+  },
 ];
+
+const heroImage =
+  "https://images.pexels.com/photos/7564863/pexels-photo-7564863.jpeg?cs=srgb&dl=pexels-cottonbro-7564863.jpg&fm=jpg";
 
 export default function HomePage() {
   return (
@@ -43,11 +62,11 @@ export default function HomePage() {
           </div>
           <div className="overflow-hidden rounded-[1.75rem] border border-brand-100 bg-brand-50/70 p-2">
             <Image
-              src="/hero-vehicle.svg"
-              alt="Illustration of a service truck and auto parts"
+              src={heroImage}
+              alt="Mechanic working under an open vehicle hood"
               width={960}
               height={540}
-              className="h-auto w-full rounded-[1.25rem]"
+              className="h-64 w-full rounded-[1.25rem] object-cover sm:h-72"
               priority
             />
           </div>
@@ -55,7 +74,7 @@ export default function HomePage() {
         <DecorativeCard
           eyebrow="Coverage"
           title="Parts that keep vehicles moving"
-          copy="Battery, brake, filtration, lighting, and maintenance essentials presented without external image dependencies."
+          copy="Battery, brake, filtration, lighting, and maintenance essentials presented with clean photography and strong branded framing."
           accent="Operational tonight"
         />
       </section>
@@ -68,22 +87,22 @@ export default function HomePage() {
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {featuredCategories.map((category, index) => (
             <article
-              key={category}
+              key={category.name}
               className="rounded-3xl bg-white p-6 shadow-card transition duration-200 hover:-translate-y-1"
             >
               <div className="mb-5 overflow-hidden rounded-2xl border border-brand-100 bg-brand-50 p-3">
                 <Image
-                  src="/category-grid.svg"
-                  alt="Illustrated automotive parts display"
+                  src={category.image}
+                  alt={`${category.name} service photo`}
                   width={720}
                   height={420}
-                  className="h-auto w-full rounded-xl"
+                  className="h-40 w-full rounded-xl object-cover"
                 />
               </div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700">
                 0{index + 1}
               </p>
-              <h2 className="mt-3 text-2xl font-bold text-slate">{category}</h2>
+              <h2 className="mt-3 text-2xl font-bold text-slate">{category.name}</h2>
               <p className="mt-3 text-sm leading-7 text-slate-600">
                 Clear category presentation built for quick browsing and easy
                 expansion as Fs Auto Supply adds more inventory.
