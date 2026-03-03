@@ -35,7 +35,7 @@ const shopBanner =
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Browse Fs Auto Supply product categories including brake kits, filters, lighting, and suspension parts for service-ready automotive orders.",
+    "Browse FS Auto Supply product categories including brake kits, filters, lighting, and suspension parts for service-ready automotive orders.",
 };
 
 export default function ShopPage() {
@@ -43,7 +43,7 @@ export default function ShopPage() {
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8 md:gap-10 md:px-10 md:py-10">
       <SectionHeading
         title="Shop"
-        copy="A clean catalog view for Fs Auto Supply with service-ready inventory highlights and straightforward browsing."
+        copy="A clean catalog view for FS Auto Supply with service-ready inventory highlights and straightforward browsing."
       />
       <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-card">
         <Image

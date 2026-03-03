@@ -1,6 +1,6 @@
-# Fs Auto Supply
+# FS Auto Supply
 
-Production-ready starter for a simple Fs Auto Supply storefront built with Next.js, TypeScript, and Tailwind CSS.
+Production-ready starter for a simple FS Auto Supply storefront built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Requirements
 

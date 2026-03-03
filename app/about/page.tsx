@@ -14,15 +14,15 @@ const aboutImage =
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn how Fs Auto Supply supports shops, fleets, and everyday drivers with dependable parts sourcing and straightforward service.",
+    "Learn how FS Auto Supply supports shops, fleets, and everyday drivers with dependable parts sourcing and straightforward service.",
 };
 
 export default function AboutPage() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8 md:gap-10 md:px-10 md:py-10">
       <SectionHeading
-        title="About Fs Auto Supply"
-        copy="Fs Auto Supply is positioned as a dependable source for service-ready parts, clear communication, and fast ordering."
+        title="About FS Auto Supply"
+        copy="FS Auto Supply is positioned as a dependable source for service-ready parts, clear communication, and fast ordering."
       />
       <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-card">
         <Image
@@ -35,7 +35,7 @@ export default function AboutPage() {
       </div>
       <section className="rounded-[2rem] bg-white p-6 shadow-card sm:p-8 md:p-10">
         <p className="text-base leading-8 text-slate-700 sm:text-lg">
-          Fs Auto Supply is presented as a dependable parts source focused on
+          FS Auto Supply is presented as a dependable parts source focused on
           service-ready inventory, straightforward purchasing, and a clean
           digital presence that can be expanded after launch.
         </p>

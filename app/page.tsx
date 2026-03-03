@@ -32,7 +32,7 @@ const heroImage =
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Explore Fs Auto Supply for dependable automotive parts, service-ready inventory, and fast quote support for shops, fleets, and daily drivers.",
+    "Explore FS Auto Supply for dependable automotive parts, service-ready inventory, and fast quote support for shops, fleets, and daily drivers.",
 };
 
 export default function HomePage() {
@@ -48,7 +48,7 @@ export default function HomePage() {
               Reliable parts supply for shops, fleets, and daily drivers.
             </h1>
             <p className="max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
-              Fs Auto Supply is set up as a clean, fast storefront with clear
+              FS Auto Supply is set up as a clean, fast storefront with clear
               navigation, static-friendly content, and a production-safe build
               path for Vercel.
             </p>
@@ -112,7 +112,7 @@ export default function HomePage() {
               <h2 className="mt-3 text-2xl font-bold text-slate">{category.name}</h2>
               <p className="mt-3 text-sm leading-7 text-slate-600">
                 Clear category presentation built for quick browsing and easy
-                expansion as Fs Auto Supply adds more inventory.
+                expansion as FS Auto Supply adds more inventory.
               </p>
               <Link
                 href="/shop"

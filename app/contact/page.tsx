@@ -9,7 +9,7 @@ const contactImage =
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Fs Auto Supply for inventory checks, quote requests, and support for service-ready automotive parts orders.",
+    "Contact FS Auto Supply for inventory checks, quote requests, and support for service-ready automotive parts orders.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
     <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8 md:gap-10 md:px-10 md:py-10">
       <SectionHeading
         title="Contact"
-        copy="Reach Fs Auto Supply for quotes, inventory checks, and parts support with a simple, launch-ready contact experience."
+        copy="Reach FS Auto Supply for quotes, inventory checks, and parts support with a simple, launch-ready contact experience."
       />
       <section className="grid items-start gap-6 md:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[2rem] bg-brand-800 p-6 text-white shadow-card sm:p-8">
@@ -32,7 +32,7 @@ export default function ContactPage() {
             />
           </div>
           <p className="mt-4 leading-8 text-brand-100">
-            Fs Auto Supply is ready to help with part availability, order
+            FS Auto Supply is ready to help with part availability, order
             questions, and quote requests for routine service needs.
           </p>
           <div className="mt-8 space-y-3 text-sm font-medium text-brand-100">

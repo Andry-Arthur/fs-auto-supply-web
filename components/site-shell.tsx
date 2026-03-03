@@ -59,7 +59,7 @@ export function SiteShell({ children }: SiteShellProps) {
             href="/"
             className="text-center text-base font-black uppercase tracking-[0.2em] text-brand-800 sm:text-lg md:text-left"
           >
-            Fs Auto Supply
+            FS Auto Supply
           </Link>
           <nav className="grid w-full grid-cols-2 gap-2 rounded-3xl border border-slate-200 bg-white p-2 shadow-sm sm:flex sm:flex-wrap sm:items-center sm:justify-center md:w-auto md:justify-end md:rounded-full">
             {navigation.map((item) => (
@@ -78,7 +78,7 @@ export function SiteShell({ children }: SiteShellProps) {
       <footer className="border-t border-slate-200/80 bg-white/90">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-slate-600 sm:px-6 md:flex-row md:items-center md:justify-between md:px-10">
           <div className="space-y-1">
-            <p className="font-semibold text-slate-900">Fs Auto Supply</p>
+            <p className="font-semibold text-slate-900">FS Auto Supply</p>
             <p className="max-w-xl">
               Dependable automotive parts supply for service-ready orders, fast quotes,
               and consistent support.

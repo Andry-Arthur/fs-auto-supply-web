@@ -4,14 +4,14 @@ import { SiteShell } from "@/components/site-shell";
 
 export const metadata: Metadata = {
   title: {
-    default: "Fs Auto Supply",
-    template: "%s | Fs Auto Supply",
+    default: "FS Auto Supply",
+    template: "%s | FS Auto Supply",
   },
   description:
-    "Fs Auto Supply offers dependable automotive parts, accessories, and service-ready components for daily drivers and fleet needs.",
-  applicationName: "Fs Auto Supply",
+    "FS Auto Supply offers dependable automotive parts, accessories, and service-ready components for daily drivers and fleet needs.",
+  applicationName: "FS Auto Supply",
   keywords: [
-    "Fs Auto Supply",
+    "FS Auto Supply",
     "auto parts",
     "automotive supply",
     "brake kits",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     "suspension parts",
     "fleet parts",
   ],
-  authors: [{ name: "Fs Auto Supply" }],
-  creator: "Fs Auto Supply",
-  publisher: "Fs Auto Supply",
+  authors: [{ name: "FS Auto Supply" }],
+  creator: "FS Auto Supply",
+  publisher: "FS Auto Supply",
   category: "automotive",
   manifest: "/site.webmanifest",
   robots: {
@@ -36,16 +36,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Fs Auto Supply",
+    title: "FS Auto Supply",
     description:
       "Dependable automotive parts, accessories, and service-ready components for daily drivers and fleet needs.",
-    siteName: "Fs Auto Supply",
+    siteName: "FS Auto Supply",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fs Auto Supply",
+    title: "FS Auto Supply",
     description:
       "Dependable automotive parts, accessories, and service-ready components for daily drivers and fleet needs.",
   },
